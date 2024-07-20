@@ -1,0 +1,26 @@
+name: Deploy to Azure Storage
+
+on:
+  push:
+    branches:
+      - main  # Trigger deployment on push to the main branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Install Azure CLI
+      run: |
+        curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+
+    - name: Deploy to Azure Storage
+      run: |
+        az storage blob upload-batch \
+          --account-name ${{ secrets.AZURE_STORAGE_ACCOUNT_NAME }} \
+          --account-key ${{ secrets.AZURE_STORAGE_ACCOUNT_KEY }} \
+          --destination '$web' \
+          --source '.'
