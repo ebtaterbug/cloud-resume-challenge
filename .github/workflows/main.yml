@@ -26,6 +26,6 @@ jobs:
           --account-name $AZURE_STORAGE_ACCOUNT_NAME \
           --account-key $AZURE_STORAGE_ACCOUNT_KEY \
           --destination '$web' \
-          --source '.' \
+          --source 'src'
           --pattern '*.{html,css,js}' \
           --overwrite  # Ensure existing files are overwritten
