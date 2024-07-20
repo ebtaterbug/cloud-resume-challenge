@@ -13,6 +13,11 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
 
+    - name: List repository files for debug
+      run: |
+        ls -R
+        pwd
+
     - name: Install Azure CLI
       run: |
         curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
@@ -26,6 +31,6 @@ jobs:
           --account-name $AZURE_STORAGE_ACCOUNT_NAME \
           --account-key $AZURE_STORAGE_ACCOUNT_KEY \
           --destination '$web' \
-          --source 'src'
+          --source '.' \
           --pattern '*.{html,css,js}' \
-          --overwrite  # Ensure existing files are overwritten
+          --overwrite
