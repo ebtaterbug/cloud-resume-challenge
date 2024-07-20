@@ -31,6 +31,5 @@ jobs:
           --account-name $AZURE_STORAGE_ACCOUNT_NAME \
           --account-key $AZURE_STORAGE_ACCOUNT_KEY \
           --destination '$web' \
-          --source '.' \
-          --pattern '*.{html,css,js}' \
+          --source './src' \
           --overwrite
