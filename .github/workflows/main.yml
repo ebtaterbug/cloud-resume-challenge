@@ -18,9 +18,12 @@ jobs:
         curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 
     - name: Deploy to Azure Storage
+      env:
+        AZURE_STORAGE_ACCOUNT_NAME: ${{ secrets.AZURE_STORAGE_ACCOUNT_NAME }}
+        AZURE_STORAGE_ACCOUNT_KEY: ${{ secrets.AZURE_STORAGE_ACCOUNT_KEY }}
       run: |
         az storage blob upload-batch \
-          --account-name ${{ secrets.AZURE_STORAGE_ACCOUNT_NAME }} \
-          --account-key ${{ secrets.AZURE_STORAGE_ACCOUNT_KEY }} \
+          --account-name $AZURE_STORAGE_ACCOUNT_NAME \
+          --account-key $AZURE_STORAGE_ACCOUNT_KEY \
           --destination '$web' \
           --source '.'
