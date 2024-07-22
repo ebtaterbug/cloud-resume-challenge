@@ -4,12 +4,119 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cloud Resume Challenge</title>
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <h1>Ian's Cloud Resume</h1>
-    <p>My Resume Will Be Here</p>
-    <div>Visitor Count: <span id="visitor-count">Loading...</span></div>
+    <div class="container mt-5">
+        <div class="mt-4">
+            <p>Visitor Count: <span id="visitor-count">Loading...</span></p>
+        </div>
+        <h1 class="text-center">Ian's Cloud Resume</h1>
+        
+        <section class="mt-4">
+            <h2>Contact Information</h2>
+            <p>
+                Ian Joseph<br>
+                559-909-3514<br>
+                <a href="mailto:ityjoseph@gmail.com">ityjoseph@gmail.com</a><br>
+                <a href="https://linkedin.com/in/ian-joseph-34418821b">linkedin.com/in/ian-joseph-34418821b</a><br>
+                <a href="https://github.com/ebtaterbug">github.com/ebtaterbug</a>
+            </p>
+        </section>
+
+        <section class="mt-4">
+            <h2>Education</h2>
+            <p>
+                <strong>Western Governors University</strong><br>
+                Master of Science in Cyber Security and Information Assurance (In Progress)<br>
+                Bachelor of Science in Computer Science, November 2023
+            </p>
+        </section>
+
+        <section class="mt-4">
+            <h2>Experience</h2>
+            <div class="mb-3">
+                <h5>Coding Bootcamp</h5>
+                <p><em>UC Davis (Remote), September 2021 – March 2022</em></p>
+                <ul>
+                    <li>Built full stack applications using React.js, Node.js, MongoDB, and Express.js</li>
+                    <li>Worked on a team to create a load board website for the logistics industry</li>
+                </ul>
+            </div>
+            <div>
+                <h5>IT Technician</h5>
+                <p><em>Trakkx.com, Encinitas, CA, July 2019 – November 2020</em></p>
+                <ul>
+                    <li>Maintained software, hardware, and networking systems</li>
+                    <li>Resolved technical issues for customers</li>
+                    <li>Documented guides for faster support</li>
+                    <li>Achieved high customer satisfaction through effective communication and timely resolutions</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="mt-4">
+            <h2>Projects</h2>
+            <div class="mb-3">
+                <h5>Cloud Resume Challenge</h5>
+                <p><em>Technologies: Azure, Python, JavaScript, HTML/CSS, Git, GitHub Actions, July 2024</em></p>
+                <ul>
+                    <li>Created a static website and hosted it on Azure Storage</li>
+                    <li>Used Azure Functions with Python to create a visitor counter API and integrated it with the web page and CosmosDB</li>
+                    <li>Configured GitHub Actions for automated deployment of the static site</li>
+                    <li>Managed source code and collaboration using Git and GitHub</li>
+                </ul>
+            </div>
+            <div class="mb-3">
+                <h5>Space Game</h5>
+                <p><em>Technologies: Node.js, Express, Socket.io, Heroku, Git, HTML/CSS, November 2022</em></p>
+                <ul>
+                    <li>Developed a multiplayer space battle game with realistic orbital mechanics</li>
+                    <li>Displayed the client with HTML, CSS, Canvas API, and JavaScript</li>
+                    <li>Maintained a central game state on a Node.js server</li>
+                    <li>Passed data between clients using Socket.io</li>
+                </ul>
+            </div>
+            <div>
+                <h5>TrakPath</h5>
+                <p><em>Technologies: Node.js, Handlebars, Sequelize, Heroku, Git, Flespi API, Express, HTML/CSS, June 2022</em></p>
+                <ul>
+                    <li>Developed a full-stack web application using Node.js and Express to serve a REST API with Handlebars and Leaflet on the frontend</li>
+                    <li>Leveraged the Flespi GPS hardware and API platform to monitor vehicle assets</li>
+                    <li>Implemented user logins with express sessions & bcrypt for password hashing</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="mt-4">
+            <h2>Certifications</h2>
+            <ul>
+                <li>CompTIA CySA+</li>
+                <li>CompTIA PenTest+</li>
+                <li>ISC2 CC</li>
+                <li>ITIL Foundations</li>
+                <li>CompTIA Project+</li>
+            </ul>
+        </section>
+
+        <section class="mt-4">
+            <h2>Technical Skills</h2>
+            <p>
+                <strong>Languages:</strong> Python, Node.js, MySQL, YAML<br>
+                <strong>Developer Tools:</strong> Git, GitHub Actions, Heroku, VS Code, Azure
+            </p>
+        </section>
+        <section class="mt-4">
+            <br>
+            <br>
+            <br>
+        </section>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
